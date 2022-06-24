@@ -13,9 +13,8 @@ import (
 )
 
 type urlCount struct {
-	url      string
-	count    int
-	workerID int
+	url   string
+	count int
 }
 
 func main() {
@@ -81,9 +80,8 @@ func processURLs(id int, chURLs <-chan string, chResult chan<- *urlCount) {
 
 func newURLCount(url string, count, workerID int) *urlCount {
 	return &urlCount{
-		url:      url,
-		count:    count,
-		workerID: workerID,
+		url:   url,
+		count: count,
 	}
 }
 
